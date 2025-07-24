@@ -1,0 +1,117 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    overflow: hidden;
+}
+
+.sky {
+    height: 100vh;
+    width: 100%;
+    background-image: url(background.jpg);
+    background-repeat: repeat-x;
+    background-size: cover;
+    background-position: 0 0;
+    position: absolute;
+    animation: skyMove linear 20s infinite;
+    overflow: hidden;
+}
+
+.trees{
+    height: 100vh;
+    width: 100%;
+    background-image: url(trees.png);
+    background-repeat: repeat-x;
+    background-size: cover;
+    background-position: 0 0;
+    position: absolute;
+    animation: treesMove linear 10s infinite;
+    overflow: hidden;
+}
+
+.track{
+    height: 60vh;
+    width: 800vw;
+    background-image: url(track.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 86vh;
+    animation: carMove linear 6s infinite;
+}
+
+.car{
+    height: 100px;
+    width: 380px;
+    background-image: url(car_body.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+    position: absolute;
+    left: 444px;
+    top: 78vh;
+    bottom: 0;
+    animation: shake linear .6s infinite;
+}
+
+.wheel1 img{
+    width: 77px;
+    position: relative;
+    top: 509px;
+    left: 487px;
+    animation: wheelRotation linear 1s infinite;
+}
+
+.wheel2 img{
+    width: 81px;
+    position: relative;
+    top: 428px;
+    left: 676px;
+    animation: wheelRotation linear 1s infinite;
+}
+
+@keyframes wheelRotation
+{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes carMove
+{
+    100%{
+        transform: translateX(-500vw) ;
+    }
+}
+
+@keyframes shake
+{
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(-2px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes skyMove {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -700px;
+    }
+}
+
+@keyframes treesMove {
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: -1000px;
+    }
+}
